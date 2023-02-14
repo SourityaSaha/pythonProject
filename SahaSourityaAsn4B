@@ -1,0 +1,30 @@
+
+#Souritya Saha Assignment4B
+
+def calcMode(list):
+
+    unique = []
+    maxCount = 0
+    maxValue = 0
+
+    #
+    if len(list) == 0:
+        return "Empty List!"
+    else:
+
+        for i in range(len(list)):
+            if list[i] not in unique:
+                unique.append(list[i])
+
+
+        for i in range(len(unique)):
+            count = list.count(unique[i])
+
+            if count > maxCount:
+                maxCount = count
+                maxValue = unique[i]
+
+        print("The mode is", maxValue, ", and it's included", maxCount, "times.")
+
+calcMode([1,2,3,4,5,6,6,6])
+print(calcMode([]))
